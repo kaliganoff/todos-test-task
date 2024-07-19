@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Footer.css";
 
 function Footer() {
- 
   return (
     <footer className="footer" data-testid="footer">
-        2024
+      2024
     </footer>
   );
 }

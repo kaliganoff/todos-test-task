@@ -28,11 +28,13 @@ class ErrorBoundary extends React.Component<BoundaryProps, BoundaryState> {
   }
 
   render() {
-    if (this.state.hasError) {
-      return this.props.fallback;
+    const { hasError } = this.state;
+    const { children, fallback } = this.props;
+    if (hasError) {
+      return fallback;
     }
 
-    return this.props.children;
+    return children;
   }
 }
 

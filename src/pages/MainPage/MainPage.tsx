@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Header from "../../components/Header/Header";
 import Main from "../../components/Main/Main";
-import getData from "../../services/getData.ts";
-import ErrorBoundary from "../../components/ErrorBoundary/ErrorBoundary.tsx";
-import Footer from "../../components/Footer/Footer.tsx";
+import getData from "../../services/getData";
+import ErrorBoundary from "../../components/ErrorBoundary/ErrorBoundary";
+import Footer from "../../components/Footer/Footer";
 
 function MainPage() {
   const [results, setResults] = useState<[]>([]);
@@ -21,7 +21,7 @@ function MainPage() {
     <>
       <Header />
       <ErrorBoundary fallback={<div>Something went wrong...</div>}>
-        <Main results={results} isLoading={isLoading}></Main>
+        <Main results={results} isLoading={isLoading} />
       </ErrorBoundary>
       <Footer />
     </>
