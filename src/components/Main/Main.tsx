@@ -17,7 +17,7 @@ function Main({ results, isLoading }: MainProps) {
           ) : (
             <>
               {results.map((item: Result) => (
-                <Card item={item} key={item.id}/>
+                <Card item={item} key={item.id} />
               ))}
             </>
           )}
